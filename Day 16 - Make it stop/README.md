@@ -1,5 +1,5 @@
 # Day 16: November 8, 2022
-![Day 16](Day16.jpg)
+![Day 16](Day16.png)
 
 ## Things I learnt today
 
