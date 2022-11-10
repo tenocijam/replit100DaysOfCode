@@ -23,3 +23,4 @@ while True:
         attempts += 1
         print("🎉 You guessed it right!!!")
         print("It took you", attempts, "attempts to guess the correct number.")
+        exit()
