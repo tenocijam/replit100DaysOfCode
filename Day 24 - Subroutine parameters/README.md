@@ -1,5 +1,5 @@
-# Day 23: November 16, 2022
-![Day 23](Day23.png)
+# Day 24: November 16, 2022
+![Day 24](Day24.png)
 
 ## Things I learnt today
 
