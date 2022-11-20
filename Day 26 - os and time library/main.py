@@ -1,25 +1,41 @@
-# Day 25
+# Day 26
 
-import random
+from replit import audio
+import os, time
 
-print("⚔ \033[36mCharacter stats generator\033[0m ⚔")
-print()
+def play():
+    source = audio.play_file('audio.wav')
+    source.paused = False # unpause the playback
+    
+    user_input = int(input("Press 2 to stop playback and return to menu "))
+    
+    if user_input == 2:
+        source.paused = True
+        show_menu()
 
-def rollDice(sides):
-    side = random.randint(1, sides)
-    return side
+def show_menu():
+    os.system("clear")
 
-def health():
-    return rollDice(6) * rollDice(8)
-
-while True:
+    print("🎵 MyPOD Music Player")
     print()
-    character = input("Enter character name: ")
-    print(character, "health is", health(), "hp")
-    repeat = input("Do you want to continue? (yes/no) ")
-    if repeat == "yes":
-        continue
-    else:
+    time.sleep(1)
+    print("Press 1 to Play")
+    time.sleep(0.5)
+    print("Press 2 to Exit")
+    time.sleep(0.5)
+    print("Press anything else to see the menu again ")
+    
+    # take user's input
+    user_input = int(input())
+
+    if user_input == 1:
+        play()
+    elif user_input == 2:
         print()
-        print("\033[34mThank you!\033[0m")
-        break
+        print("Thank you!")
+        exit()
+    else:
+        show_menu()
+
+
+show_menu()
